@@ -1,6 +1,6 @@
 # KillTheYak
 
-[http://KillTheYak.com](http://killtheyak.com)
+My [KillTheYak](https://daschwa.github.io/killtheyak)
 
 > You see, yak shaving is what you are doing when you're doing some stupid, fiddly little task that bears no obvious relationship to what you're supposed to be working on, but yet a chain of twelve causal relations links what you're doing to the original meta-task.
 
