@@ -22,9 +22,6 @@ def build():
     """Builds the static files."""
     print("Freezing it up! Brr...")
     freezer.freeze()  # Freezes the project to build/
-    print('Copying CNAME...')
-    cname = os.path.join(HERE, 'CNAME')
-    shutil.copyfile(cname, os.path.join(build_dir, 'CNAME'))
     print('...done')
 
 
@@ -33,10 +30,7 @@ def deploy(push=True):
     '''Deploys the site to GitHub Pages.'''
     build()
     print('Deploying to GitHub pages...')
-    command = 'ghp-import -b master -m "[deploy] Build" '
-    if push:
-        command += '-p '
-    command += build_dir
+    command = 'ghp-import -p -m "[deploy] Build" ' + build_dir
     os.system(command)
     print('...done')
 

@@ -26,3 +26,6 @@ BASE_URL = 'http://daschwa.github.io/killtheyak'
 GITHUB_REPO = 'http://www.github.com/daschwa/killtheyak'
 PAGES_REPO = 'http://www.github.com/daschwa/killtheyak-pages'
 RAW_PAGES_PREFIX = "https://raw.github.com/daschwa/killtheyak-pages/master/"
+
+# View site locally
+FREEZER_RELATIVE_URLS = True

@@ -8,7 +8,7 @@ from .main import app
 @app.template_filter('fenced_code')
 def fenced_code(html):
     '''Returns the html for all code on a page.'''
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "html.parser")
     # List of Tags containing code
     blocks = soup.find_all('div', class_='codehilite')
     # Now, as strings
