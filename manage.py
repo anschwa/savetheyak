@@ -5,7 +5,7 @@ import os
 import shutil
 
 from flask.ext.script import Manager
-from killtheyak.main import app, freezer
+from savetheyak.main import app, freezer
 
 manager = Manager(app)
 build_dir = app.config['FREEZER_DESTINATION']
@@ -33,18 +33,6 @@ def deploy(push=True):
     command = 'ghp-import -p -m "[deploy] Build" ' + build_dir
     os.system(command)
     print('...done')
-
-@manager.command
-def test(unit=True, webtest=True):
-    """Runs the tests.
-    """
-    command = 'nosetests killtheyak/test/ --verbosity=2'
-    if not unit:
-        command += ' --exclude="unit_tests'
-    if not webtest:
-        command += ' --exclude="webtest_tests"'
-    os.system(command)
-
 
 if __name__ == '__main__':
     manager.run()

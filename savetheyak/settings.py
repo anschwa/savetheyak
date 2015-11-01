@@ -20,12 +20,12 @@ DEBUG = True
 SECRET_KEY = 'shhhh'
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'footnotes']
 FLATPAGES_ROOT = os.path.join(PROJECT_ROOT, 'killtheyak-pages')
-FLATPAGES_EXTENSION = '.md'
+FLATPAGES_EXTENSION = '.markdown'
 
-BASE_URL = 'http://daschwa.github.io/killtheyak'
-GITHUB_REPO = 'http://www.github.com/daschwa/killtheyak'
-PAGES_REPO = 'http://www.github.com/daschwa/killtheyak-pages'
-RAW_PAGES_PREFIX = "https://raw.github.com/daschwa/killtheyak-pages/master/"
+BASE_URL = 'http://daschwa.github.io/savetheyak'
+GITHUB_REPO = 'http://www.github.com/daschwa/savetheyak'
+PAGES_REPO = 'http://www.github.com/daschwa/savetheyak-pages'
+RAW_PAGES_PREFIX = "https://raw.github.com/daschwa/savetheyak-pages/master/"
 
 # View site locally
 FREEZER_RELATIVE_URLS = True

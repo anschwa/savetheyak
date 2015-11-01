@@ -7,8 +7,3 @@ frozen-flask
 
 # Deployment
 ghp-import
-
-# Testing
-nose
-webtest
-

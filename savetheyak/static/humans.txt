@@ -3,9 +3,13 @@
 
 # TEAM
 
-    Steven Loria -- http://stevenloria.com
+    Adam Schwartz -- http://adamschwartz.io
 
 # THANKS
+
+    Steven Loria -- http://stevenloria.com
+
+    AND
 
     To anyone who contributed content
     and the many open-source contributors to the
@@ -14,6 +18,6 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3,
-    jQuery, Markdown
+    Markdown,
     Flask, Flask-FlatPages,
     Frozen-Flask, Flask-Script

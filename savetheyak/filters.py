@@ -49,6 +49,6 @@ def datetime_format(value,
 @app.template_filter('raw_page_url')
 def raw_page_url(page):
     prefix = app.config.get("RAW_PAGE_PREFIX",
-        "https://raw.github.com/killtheyak/killtheyak-pages/master/")
+        "https://raw.github.com/daschwa/killtheyak-pages/master/")
     url = prefix + page.path + ".md"
     return url
