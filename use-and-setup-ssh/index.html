@@ -3,10 +3,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kill The Yak
-| use ncmpcpp
+| settup and use SSH
 </title>
   <meta name="description" content="
-    Installing and basic configuration of mpd and ncmpcpp.
+    This is the template page.
 ">
   <link type="text/plain" rel="author" href="/static/humans.txt" />
   <link href="../feed/recent.atom"
@@ -52,7 +52,7 @@
     <div class="content">
 <article>
 <h1 class='muted'>All I want to do is. . .</h1>
-<h1 class='page-title'>. . .use ncmpcpp.</h1>
+<h1 class='page-title'>. . .settup and use SSH.</h1>
 
 
     
@@ -78,13 +78,7 @@
     <span class="pure-menu-heading">Tags: </span>
     <ul class="tag-list">
         
-            <li><a href="../tag/mpd/index.html">mpd</a></li>
-            ::
-        
-            <li><a href="../tag/mpc/index.html">mpc</a></li>
-            ::
-        
-            <li><a href="../tag/ncmpcpp/index.html">ncmpcpp</a></li>
+            <li><a href="../tag/ssh/index.html">ssh</a></li>
             
         
     </ul>
@@ -93,7 +87,7 @@
 
 <br>
 
-Installing and basic configuration of mpd and ncmpcpp.
+This is the template page.
 
 
 <hr>
@@ -117,97 +111,62 @@ Contributors:
 
 
 
-    <p>Do these first:</p>
-    <ul class='deps-list'>
-    
-        <li>
-            <div class="dep-container">
-                <a class="dep-name" href="#">
-                    install mpd, mpc, and ncmpcpp
-                </a>
-
-                <div class="dep-code-container">
-                <div class="codehilite"><pre>brew update
-</pre></div>
-<div class="codehilite"><pre>brew install mpd
-</pre></div>
-<div class="codehilite"><pre>brew install mpc
-</pre></div>
-<div class="codehilite"><pre>brew install ncmpcpp
-</pre></div>
-                </div>
-                
-                    
-    
-        <i class="muted icon-macosx"></i>
-    
-
-                
-                <a href="../install-mpd-mpc-ncmpcpp/index.html">&nbsp;[full instructions]</a>
-            </div>
-        </li>
-    
-    </ul>
-
 
 <hr>
 
 
-<h1>Music Player Daemon (mpd)</h1>
-<h2>Setup</h2>
-<p>Create a file called <code>~/.mpdconf</code> with the following:</p>
-<div class="codehilite"><pre>music_directory         &quot;~/Music&quot;
-playlist_directory              &quot;~/.mpd/playlists&quot;
-db_file                 &quot;~/.mpd/database&quot;
-pid_file                        &quot;~/.mpd/pid&quot;
-state_file              &quot;~/.mpd/state&quot;
-sticker_file                    &quot;~/.mpd/sticker.sql&quot;
-port                            &quot;6600&quot;
-auto_update     &quot;yes&quot;
-audio_output {
-        type            &quot;osx&quot;
-        name            &quot;My Mac Device&quot;
-        mixer_type      &quot;software&quot;
-}
+<h1>Genarating and sharing public key</h1>
+<p>How to create a new public key for ssh and add it to the remote machine.</p>
+<p>generate key:</p>
+<div class="codehilite"><pre>ssh-keygen -t rsa
 </pre></div>
 
 
-<p>And these:</p>
-<div class="codehilite"><pre>mkdir ~/.mpd
-mkdir ~/.mpd/playlists
-touch ~/.mpd/database
+<p>Append it to the server: </p>
+<div class="codehilite"><pre>cat ~/.ssh/id_rsa.pub | ssh user@server &quot;cat &gt;&gt; ~/.ssh/authorized_keys&quot;
 </pre></div>
 
 
-<h1>mpc</h1>
-<p>Command line Music Player Client.</p>
-<h2>Usefull Commands</h2>
-<p>Add matching search results to the current playlist.</p>
-<div class="codehilite"><pre>mpc clear; mpc search &lt;query&gt; | mpc add; mpc play
+<p>Copy a file to the remote machine:</p>
+<div class="codehilite"><pre>scp ~/path/to/file user@server:/path/on/server
 </pre></div>
 
 
-<h1><code>mpc.el</code></h1>
-<p>Emacs front end to <code>mpd</code>.</p>
-<h1>ncmpcpp</h1>
-<p>Powerful yet lightweight <code>mpd</code> client.</p>
-<h2>Basic Usage</h2>
+<p>Copy a file from the remote machine:</p>
+<div class="codehilite"><pre>scp user@server:/path/to/file ~/path/on/local
+</pre></div>
+
+
+<h1>SSH Config</h1>
+<p>Creating a <code>~/.ssh/config</code> file. Having aliases for SSH is a dream.</p>
+<div class="codehilite"><pre>    Host somealias
+        HostName example.com
+        Port 2222
+        User someuser
+        IdentityFile  ~/.ssh/id_example
+        IdentitiesOnly yes
+
+    Host anotheralias
+        HostName 192.168.33.10
+        User anotheruser
+        PubkeyAuthentication no
+
+    How aws
+        HostName some.address.ec2.aws.com
+        User awsuser
+        IdentityFile  ~/.ssh/aws_identity.pem
+        IdentitiesOnly yes
+</pre></div>
+
+
+<p>Usage: <code>ssh somealias</code></p>
 <ul>
-<li><code>1</code> View Playlist</li>
-<li><code>4</code> View Library</li>
-<li><code>p</code> Play / Pause</li>
-<li><code>a</code> Add to Playlist</li>
-<li><code>c</code> Clear Playlist</li>
-<li><code>q</code> Quit</li>
-<li><code>l</code> Fetch Lyrics</li>
-</ul>
-<h2>Playback Modes</h2>
-<ul>
-<li><code>r</code> repeat mode <code>[r-----]</code></li>
-<li><code>z</code> random mode <code>[-z----]</code></li>
-<li><code>y</code> single mode <code>[--s---]</code></li>
-<li><code>R</code> consume mode <code>[---c--]</code></li>
-<li><code>x</code> crossfade mode <code>[----x-]</code></li>
+<li>HostName - The server host (domain or ipaddress)</li>
+<li>Port - The port to use when connecting</li>
+<li>User - The username to log in with</li>
+<li>IdentityFile - The SSH key identity to use to log in with, if using SSH key access</li>
+<li>IdentitiesOnly - "Yes" to specify only attempting to log in via SSH key</li>
+<li>PubkeyAuthentication - "No" to specify you wish to bypass attempting SSH key authentication</li>
 </ul>
 </article>
 
@@ -215,7 +174,7 @@ touch ~/.mpd/database
 
 
 
-<p>Raw: <a href="https://raw.github.com/killtheyak/killtheyak-pages/master/use-mpd-mpc-ncmpcpp.md">use-mpd-mpc-ncmpcpp.md</a></p>
+<p>Raw: <a href="https://raw.github.com/killtheyak/killtheyak-pages/master/use-and-setup-ssh.md">use-and-setup-ssh.md</a></p>
 
 <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 <a class="addthis_button_reddit"></a>
