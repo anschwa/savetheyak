@@ -3,10 +3,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kill The Yak
-| use submodules in git
+| use ncmpcpp
 </title>
   <meta name="description" content="
-    Helpful commands for working with git submodules.
+    Installing and basic configuration of mpd and ncmpcpp.
 ">
   <link type="text/plain" rel="author" href="/static/humans.txt" />
   <link href="../feed/recent.atom"
@@ -52,7 +52,7 @@
     <div class="content">
 <article>
 <h1 class='muted'>All I want to do is. . .</h1>
-<h1 class='page-title'>. . .use submodules in git.</h1>
+<h1 class='page-title'>. . .use ncmpcpp.</h1>
 
 
     
@@ -64,9 +64,6 @@
         ::
         
         <li><a href="../os/linux/index.html"><i class="icon-linux"></i>linux</a></li>
-        ::
-        
-        <li><a href="../os/windows/index.html"><i class="icon-windows"></i>windows</a></li>
         
         
     </ul>
@@ -81,7 +78,13 @@
     <span class="pure-menu-heading">Tags: </span>
     <ul class="tag-list">
         
-            <li><a href="../tag/git/index.html">git</a></li>
+            <li><a href="../tag/mpd/index.html">mpd</a></li>
+            ::
+        
+            <li><a href="../tag/mpc/index.html">mpc</a></li>
+            ::
+        
+            <li><a href="../tag/ncmpcpp/index.html">ncmpcpp</a></li>
             
         
     </ul>
@@ -90,7 +93,7 @@
 
 <br>
 
-Helpful commands for working with git submodules.
+Installing and basic configuration of mpd and ncmpcpp.
 
 
 <hr>
@@ -114,87 +117,105 @@ Contributors:
 
 
 
+    <p>Do these first:</p>
+    <ul class='deps-list'>
+    
+        <li>
+            <div class="dep-container">
+                <a class="dep-name" href="#">
+                    install mpd, mpc, and ncmpcpp
+                </a>
+
+                <div class="dep-code-container">
+                <div class="codehilite"><pre>brew update
+</pre></div>
+<div class="codehilite"><pre>brew install mpd
+</pre></div>
+<div class="codehilite"><pre>brew install mpc
+</pre></div>
+<div class="codehilite"><pre>brew install ncmpcpp
+</pre></div>
+                </div>
+                
+                    
+    
+        <i class="muted icon-macosx"></i>
+    
+
+                
+                <a href="../install-mpd-mpc-ncmpcpp/index.html">&nbsp;[full instructions]</a>
+            </div>
+        </li>
+    
+    </ul>
+
 
 <hr>
 
 
-<p>How to use submodules in <code>git</code>.</p>
-<h1>Cloning Repository with Submodules</h1>
-<p>There are two ways to do this:</p>
-<p>First, clone the repository without fetching the submodule's files: </p>
-<div class="codehilite"><pre>git clone &lt;repository&gt;
+<h1>Music Player Daemon (mpd)</h1>
+<h2>Setup</h2>
+<p>Create a file called <code>~/.mpdconf</code> with the following:</p>
+<div class="codehilite"><pre>music_directory         &quot;~/Music&quot;
+playlist_directory              &quot;~/.mpd/playlists&quot;
+db_file                 &quot;~/.mpd/database&quot;
+pid_file                        &quot;~/.mpd/pid&quot;
+state_file              &quot;~/.mpd/state&quot;
+sticker_file                    &quot;~/.mpd/sticker.sql&quot;
+port                            &quot;6600&quot;
+auto_update     &quot;yes&quot;
+audio_output {
+        type            &quot;osx&quot;
+        name            &quot;My Mac Device&quot;
+        mixer_type      &quot;software&quot;
+}
 </pre></div>
 
 
-<p>Then, fetch all the submodule data:</p>
-<div class="codehilite"><pre>git submodule init
-git submodule update
+<p>And these:</p>
+<div class="codehilite"><pre>mkdir ~/.mpd
+mkdir ~/.mpd/playlists
+touch ~/.mpd/database
 </pre></div>
 
 
-<p>Or, you can simply do this all at once with:</p>
-<div class="codehilite"><pre>git clone --recursive &lt;repository&gt;
+<h1>mpc</h1>
+<p>Command line Music Player Client.</p>
+<h2>Usefull Commands</h2>
+<p>Add matching search results to the current playlist.</p>
+<div class="codehilite"><pre>mpc clear; mpc search &lt;query&gt; | mpc add; mpc play
 </pre></div>
 
 
-<h1>Removing Submodule</h1>
-<p>Taken from: <a href="http://davidwalsh.name/git-remove-submodule">David Walsh's Remove a Submodule within git </a></p>
-<ol>
-<li>Delete the relevant section from the <code>.gitmodules</code> file.  The section would look similar to:</li>
-</ol>
-<div class="codehilite"><pre><span class="k">[submodule &quot;vendor&quot;]</span>
-    <span class="na">path</span> <span class="o">=</span> <span class="s">vendor</span>
-<span class="s">    url = git://github.com/some-user/some-repo.git</span>
-</pre></div>
-
-
-<ol>
-<li>Stage the <code>.gitmodules</code> changes via command line using:</li>
-</ol>
-<div class="codehilite"><pre>git add .gitmodules
-</pre></div>
-
-
-<ol>
-<li>Delete the relevant section from <code>.git/config</code>, which will look like:</li>
-</ol>
-<div class="codehilite"><pre><span class="k">[submodule &quot;vendor&quot;]</span>
-    <span class="na">url</span> <span class="o">=</span> <span class="s">git://github.com/some-user/some-repo.git</span>
-</pre></div>
-
-
-<ol>
-<li>Run:</li>
-</ol>
-<div class="codehilite"><pre>git rm --cached path/to/submodule
-</pre></div>
-
-
-<p>Don't include a trailing slash, that will lead to an error.</p>
-<ol>
-<li>Run:</li>
-</ol>
-<div class="codehilite"><pre>rm -rf .git/modules/submodule_name
-</pre></div>
-
-
-<ol>
-<li>
-<p>Commit the change:</p>
-</li>
-<li>
-<p>Delete the now untracked submodule files</p>
-</li>
-</ol>
-<div class="codehilite"><pre>rm -rf path/to/submodule
-</pre></div>
+<h1><code>mpc.el</code></h1>
+<p>Emacs front end to <code>mpd</code>.</p>
+<h1>ncmpcpp</h1>
+<p>Powerful yet lightweight <code>mpd</code> client.</p>
+<h2>Basic Usage</h2>
+<ul>
+<li><code>1</code> View Playlist</li>
+<li><code>4</code> View Library</li>
+<li><code>p</code> Play / Pause</li>
+<li><code>a</code> Add to Playlist</li>
+<li><code>c</code> Clear Playlist</li>
+<li><code>q</code> Quit</li>
+<li><code>l</code> Fetch Lyrics</li>
+</ul>
+<h2>Playback Modes</h2>
+<ul>
+<li><code>r</code> repeat mode <code>[r-----]</code></li>
+<li><code>z</code> random mode <code>[-z----]</code></li>
+<li><code>y</code> single mode <code>[--s---]</code></li>
+<li><code>R</code> consume mode <code>[---c--]</code></li>
+<li><code>x</code> crossfade mode <code>[----x-]</code></li>
+</ul>
 </article>
 
 <div id="likeBtn"></div>
 
 
 
-<p>Raw: <a href="https://raw.github.com/killtheyak/killtheyak-pages/master/use-git-submodule.md">use-git-submodule.md</a></p>
+<p>Raw: <a href="https://raw.github.com/killtheyak/killtheyak-pages/master/use-mpd-mpc-ncmpcpp.md">use-mpd-mpc-ncmpcpp.md</a></p>
 
 <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 <a class="addthis_button_reddit"></a>

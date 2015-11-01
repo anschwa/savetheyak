@@ -15,36 +15,14 @@
     <author>
       <name>http://www.github.com/daschwa</name>
     </author>
-    <content type="html">This is the template page.</content>
+    <content type="html">Download an entire website.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">source code to PDF</title>
-    <id>http://daschwa.github.io/source-code-to-pdf</id>
+    <title type="text">settup and use SSH</title>
+    <id>http://daschwa.github.io/use-and-setup-ssh</id>
     <updated>2015-10-10T00:00:00Z</updated>
     <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/source-code-to-pdf" />
-    <author>
-      <name>http://www.github.com/daschwa</name>
-    </author>
-    <content type="html">This is the template page.</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">usefull ffmpeg commands</title>
-    <id>http://daschwa.github.io/usefull-ffmpeg</id>
-    <updated>2015-10-10T00:00:00Z</updated>
-    <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/usefull-ffmpeg" />
-    <author>
-      <name>http://www.github.com/daschwa</name>
-    </author>
-    <content type="html">This is the template page.</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">convert files with pandoc</title>
-    <id>http://daschwa.github.io/use-pandoc</id>
-    <updated>2015-10-10T00:00:00Z</updated>
-    <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/use-pandoc" />
+    <link href="http://daschwa.github.io/use-and-setup-ssh" />
     <author>
       <name>http://www.github.com/daschwa</name>
     </author>
@@ -62,18 +40,7 @@
     <content type="html">http://daschwa.github.io/install-mpd-mpc-ncmpcpp</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">print with a2ps</title>
-    <id>http://daschwa.github.io/print-with-a2ps</id>
-    <updated>2015-10-10T00:00:00Z</updated>
-    <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/print-with-a2ps" />
-    <author>
-      <name>http://www.github.com/daschwa</name>
-    </author>
-    <content type="html">This is the template page.</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">spoof your MAC address</title>
+    <title type="text">spoof my MAC address</title>
     <id>http://daschwa.github.io/spoof-mac-address</id>
     <updated>2015-10-10T00:00:00Z</updated>
     <published>2015-10-10T00:00:00Z</published>
@@ -81,32 +48,10 @@
     <author>
       <name>http://www.github.com/daschwa</name>
     </author>
-    <content type="html">This is the template page.</content>
+    <content type="html">spoof your MAC address and protect your privacy.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">settup and use SSH</title>
-    <id>http://daschwa.github.io/use-and-setup-ssh</id>
-    <updated>2015-10-10T00:00:00Z</updated>
-    <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/use-and-setup-ssh" />
-    <author>
-      <name>http://www.github.com/daschwa</name>
-    </author>
-    <content type="html">This is the template page.</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">using submodules in git</title>
-    <id>http://daschwa.github.io/use-git-submodule</id>
-    <updated>2015-10-10T00:00:00Z</updated>
-    <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/use-git-submodule" />
-    <author>
-      <name>http://www.github.com/daschwa</name>
-    </author>
-    <content type="html">This is the template page.</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">compress JPEG image</title>
+    <title type="text">compress images</title>
     <id>http://daschwa.github.io/imagemagick-compression</id>
     <updated>2015-10-10T00:00:00Z</updated>
     <published>2015-10-10T00:00:00Z</published>
@@ -114,7 +59,51 @@
     <author>
       <name>http://www.github.com/daschwa</name>
     </author>
-    <content type="html">This is the template page.</content>
+    <content type="html">Sometimes images are just too big!</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">turn source code into a PDF</title>
+    <id>http://daschwa.github.io/source-code-to-pdf</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/source-code-to-pdf" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">For those times when you need to print your code.</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">use submodules in git</title>
+    <id>http://daschwa.github.io/use-git-submodule</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/use-git-submodule" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">Helpful commands for working with git submodules.</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">use ffmpeg</title>
+    <id>http://daschwa.github.io/usefull-ffmpeg</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/usefull-ffmpeg" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">Useful ffmpeg commands like speeding up video or boosting audio.</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">use ncmpcpp</title>
+    <id>http://daschwa.github.io/use-mpd-mpc-ncmpcpp</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/use-mpd-mpc-ncmpcpp" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">Installing and basic configuration of mpd and ncmpcpp.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
     <title type="text">use ed</title>
@@ -125,7 +114,29 @@
     <author>
       <name>http://www.github.com/daschwa</name>
     </author>
-    <content type="html">This is the template page.</content>
+    <content type="html">A short interactive tutorial for ed.</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">print with a2ps</title>
+    <id>http://daschwa.github.io/print-with-a2ps</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/print-with-a2ps" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">Printing from the command line.</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">convert files with pandoc</title>
+    <id>http://daschwa.github.io/use-pandoc</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/use-pandoc" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">Some sample file conversions you can do with pandoc.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
     <title type="text">Use PostgreSQL with Flask or Django</title>
@@ -159,16 +170,5 @@
       <name>Anonymous</name>
     </author>
     <content type="html">Homebrew's tagline is &quot;the missing package manager for OS X&quot;. It is by far the best package manager for Mac available and will save you hours of yak-shaving.</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">Install Python 2 and/or 3</title>
-    <id>http://daschwa.github.io/install-python</id>
-    <updated>2013-09-15T00:00:00Z</updated>
-    <published>2013-09-15T00:00:00Z</published>
-    <link href="http://daschwa.github.io/install-python" />
-    <author>
-      <name>http://www.github.com/sloria</name>
-    </author>
-    <content type="html">http://daschwa.github.io/install-python</content>
   </entry>
 </feed>
