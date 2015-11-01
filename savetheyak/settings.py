@@ -20,7 +20,7 @@ DEBUG = True
 SECRET_KEY = 'shhhh'
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'footnotes']
 FLATPAGES_ROOT = os.path.join(PROJECT_ROOT, 'killtheyak-pages')
-FLATPAGES_EXTENSION = '.markdown'
+FLATPAGES_EXTENSION = '.md'
 
 BASE_URL = 'http://daschwa.github.io/savetheyak'
 GITHUB_REPO = 'http://www.github.com/daschwa/savetheyak'

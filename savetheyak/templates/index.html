@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="hero">
-{% if request.path == url_for('home')  %}
+{% if request.path == url_for('home') or home %}
     <h1 class="pure-u-1 brand">Save The Yak</h1>
     <h2 class="pure-u-3-4 l-centered subtitle">No-BS guides to get your project rolling</h2>
 </div><!-- end hero-->

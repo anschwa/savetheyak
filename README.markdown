@@ -8,7 +8,7 @@ A yak friendly redesign of [KillTheYak](http://killtheyak.com), a wonderful webs
 
 <cite>- Jeremy H. Brown</cite>
 
-[SaveTheYak][SaveTheYak] is a website with guides that will reduce the time you spend yak shaving.
+Save The Yak is a website with guides that will reduce the time you spend yak shaving.
 
 ## Contribute content
 

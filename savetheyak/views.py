@@ -60,7 +60,7 @@ def pages_url_generator():
 def home():
     latest = ALL_SORTED[:15]
     return render_template('index.html', pages=latest,
-            all_tags=SORTED_TAGS, all_os=ALL_OS)
+                           all_tags=SORTED_TAGS, all_os=ALL_OS, home=True)
 
 
 @app.route('/guides/')
