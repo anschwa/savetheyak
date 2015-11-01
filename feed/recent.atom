@@ -7,6 +7,28 @@
   <link href="http://localhost/feed/recent.atom" rel="self" />
   <generator>Werkzeug</generator>
   <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">use ncmpcpp</title>
+    <id>http://daschwa.github.io/use-mpd-mpc-ncmpcpp</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/use-mpd-mpc-ncmpcpp" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">Installing and basic configuration of mpd and ncmpcpp.</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">compress images</title>
+    <id>http://daschwa.github.io/imagemagick-compression</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/imagemagick-compression" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">Sometimes images are just too big!</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
     <title type="text">use submodules in git</title>
     <id>http://daschwa.github.io/use-git-submodule</id>
     <updated>2015-10-10T00:00:00Z</updated>
@@ -29,15 +51,15 @@
     <content type="html">A short interactive tutorial for ed.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">convert files with pandoc</title>
-    <id>http://daschwa.github.io/use-pandoc</id>
+    <title type="text">wget an entire website</title>
+    <id>http://daschwa.github.io/use-wget</id>
     <updated>2015-10-10T00:00:00Z</updated>
     <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/use-pandoc" />
+    <link href="http://daschwa.github.io/use-wget" />
     <author>
       <name>http://www.github.com/daschwa</name>
     </author>
-    <content type="html">Some sample file conversions you can do with pandoc.</content>
+    <content type="html">Download an entire website.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
     <title type="text">settup and use SSH</title>
@@ -51,26 +73,15 @@
     <content type="html">This is the template page.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">use ffmpeg</title>
-    <id>http://daschwa.github.io/usefull-ffmpeg</id>
+    <title type="text">install mpd, mpc, and ncmpcpp</title>
+    <id>http://daschwa.github.io/install-mpd-mpc-ncmpcpp</id>
     <updated>2015-10-10T00:00:00Z</updated>
     <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/usefull-ffmpeg" />
+    <link href="http://daschwa.github.io/install-mpd-mpc-ncmpcpp" />
     <author>
       <name>http://www.github.com/daschwa</name>
     </author>
-    <content type="html">Useful ffmpeg commands like speeding up video or boosting audio.</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">use ncmpcpp</title>
-    <id>http://daschwa.github.io/use-mpd-mpc-ncmpcpp</id>
-    <updated>2015-10-10T00:00:00Z</updated>
-    <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/use-mpd-mpc-ncmpcpp" />
-    <author>
-      <name>http://www.github.com/daschwa</name>
-    </author>
-    <content type="html">Installing and basic configuration of mpd and ncmpcpp.</content>
+    <content type="html">http://daschwa.github.io/install-mpd-mpc-ncmpcpp</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
     <title type="text">print with a2ps</title>
@@ -84,17 +95,6 @@
     <content type="html">Printing from the command line.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">install mpd, mpc, and ncmpcpp</title>
-    <id>http://daschwa.github.io/install-mpd-mpc-ncmpcpp</id>
-    <updated>2015-10-10T00:00:00Z</updated>
-    <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/install-mpd-mpc-ncmpcpp" />
-    <author>
-      <name>http://www.github.com/daschwa</name>
-    </author>
-    <content type="html">http://daschwa.github.io/install-mpd-mpc-ncmpcpp</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
     <title type="text">spoof my MAC address</title>
     <id>http://daschwa.github.io/spoof-mac-address</id>
     <updated>2015-10-10T00:00:00Z</updated>
@@ -106,6 +106,28 @@
     <content type="html">spoof your MAC address and protect your privacy.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">convert files with pandoc</title>
+    <id>http://daschwa.github.io/use-pandoc</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/use-pandoc" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">Some sample file conversions you can do with pandoc.</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
+    <title type="text">use ffmpeg</title>
+    <id>http://daschwa.github.io/usefull-ffmpeg</id>
+    <updated>2015-10-10T00:00:00Z</updated>
+    <published>2015-10-10T00:00:00Z</published>
+    <link href="http://daschwa.github.io/usefull-ffmpeg" />
+    <author>
+      <name>http://www.github.com/daschwa</name>
+    </author>
+    <content type="html">Useful ffmpeg commands like speeding up video or boosting audio.</content>
+  </entry>
+  <entry xml:base="http://localhost/feed/recent.atom">
     <title type="text">turn source code into a PDF</title>
     <id>http://daschwa.github.io/source-code-to-pdf</id>
     <updated>2015-10-10T00:00:00Z</updated>
@@ -115,28 +137,6 @@
       <name>http://www.github.com/daschwa</name>
     </author>
     <content type="html">For those times when you need to print your code.</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">compress images</title>
-    <id>http://daschwa.github.io/imagemagick-compression</id>
-    <updated>2015-10-10T00:00:00Z</updated>
-    <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/imagemagick-compression" />
-    <author>
-      <name>http://www.github.com/daschwa</name>
-    </author>
-    <content type="html">Sometimes images are just too big!</content>
-  </entry>
-  <entry xml:base="http://localhost/feed/recent.atom">
-    <title type="text">wget an entire website</title>
-    <id>http://daschwa.github.io/use-wget</id>
-    <updated>2015-10-10T00:00:00Z</updated>
-    <published>2015-10-10T00:00:00Z</published>
-    <link href="http://daschwa.github.io/use-wget" />
-    <author>
-      <name>http://www.github.com/daschwa</name>
-    </author>
-    <content type="html">Download an entire website.</content>
   </entry>
   <entry xml:base="http://localhost/feed/recent.atom">
     <title type="text">Use PostgreSQL with Flask or Django</title>
