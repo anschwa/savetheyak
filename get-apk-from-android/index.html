@@ -3,10 +3,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Save The Yak
-| use ffmpeg
+| Get an app apk from and android device
 </title>
   <meta name="description" content="
-    Useful ffmpeg commands like speeding up video or boosting audio.
+    None
 ">
   <link type="text/plain" rel="author" href="/static/humans.txt" />
   <link href="../feed/recent.atom"
@@ -45,7 +45,7 @@
     <div class="content">
 <article>
 <h1 class='muted'>All I want to do is. . .</h1>
-<h1 class='page-title'>. . .use ffmpeg.</h1>
+<h1 class='page-title'>. . .get an app apk from and android device.</h1>
 
 
     
@@ -54,6 +54,9 @@
     <ul class="os-list">
         
         <li><a href="../os/macosx/index.html"><i class="icon-macosx"></i>macosx</a></li>
+        ::
+        
+        <li><a href="../os/windows/index.html"><i class="icon-windows"></i>windows</a></li>
         ::
         
         <li><a href="../os/linux/index.html"><i class="icon-linux"></i>linux</a></li>
@@ -66,21 +69,9 @@
 
 
 
-    
-        <div class="pure-menu pure-menu-open pure-menu-horizontal tag-menu">
-    <span class="pure-menu-heading">Tags: </span>
-    <ul class="tag-list">
-        
-            <li><a href="../tag/ffmpeg/index.html">ffmpeg</a></li>
-            
-        
-    </ul>
-</div>
-    
-
 <br>
 
-Useful ffmpeg commands like speeding up video or boosting audio.
+None
 
 
 <hr>
@@ -91,14 +82,14 @@ Useful ffmpeg commands like speeding up video or boosting audio.
 <span class="contributors-list">
 Contributors:
 
-<a href="http://www.github.com/daschwa">daschwa</a>
+<a href="http://www.github.com/anschwa">anschwa</a>
 
 
 
 
 
 
-<span class='date date-updated'>Updated: 10/10/15</span>
+<span class='date date-updated'>Updated: 07/15/13</span>
 
 
 
@@ -108,36 +99,21 @@ Contributors:
 <hr>
 
 
-<p>Helpful <a href="https://www.ffmpeg.org/">ffmpeg</a> commands.</p>
-<h1>Speeding Up</h1>
-<p>Speed video up 2x.</p>
-<div class="codehilite"><pre>ffmpeg -i input.mkv -filter:v &quot;setpts=0.5*PTS&quot; output.mkv
+<p>List 3rd party packages on your device.</p>
+<div class="codehilite"><pre>adb shell pm list packages -f -3
 </pre></div>
 
 
-<h1>Slowing Down</h1>
-<p>Slow video down 2x</p>
-<div class="codehilite"><pre>ffmpeg -i input.mkv -filter:v &quot;setpts=2.0*PTS&quot; output.mkv
+<p>Now pull the package to your computer.</p>
+<div class="codehilite"><pre>adb pull /data/app/XX.XX.XX.apk
 </pre></div>
-
-
-<h1>Add Audio track to Video</h1>
-<div class="codehilite"><pre>ffmpeg -i input.mkv -i input.mp3 -c copy -shortest -map 0:0 -map 1:0 output.mkv
-</pre></div>
-
-
-<h1>Boost Audio</h1>
-<p>Boost audio by 150%
-'''
-ffmpeg -g input.mp4 -af "volume=1.5" output.mp4
-'''</p>
 </article>
 
 <div id="likeBtn"></div>
 
 
 
-<p>Raw: <a href="https://raw.github.com/daschwa/killtheyak-pages/master/usefull-ffmpeg.md">usefull-ffmpeg.md</a></p>
+<p>Raw: <a href="https://raw.github.com/daschwa/killtheyak-pages/master/get-apk-from-android.md">get-apk-from-android.md</a></p>
 
 <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 <a class="addthis_button_reddit"></a>

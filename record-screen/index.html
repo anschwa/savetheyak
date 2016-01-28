@@ -3,10 +3,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Save The Yak
-| compress images
+| record your screen on OS X
 </title>
   <meta name="description" content="
-    Sometimes images are just too big!
+    How to record your Mac&#39;s desktop with minimal additional software
 ">
   <link type="text/plain" rel="author" href="/static/humans.txt" />
   <link href="../feed/recent.atom"
@@ -45,7 +45,7 @@
     <div class="content">
 <article>
 <h1 class='muted'>All I want to do is. . .</h1>
-<h1 class='page-title'>. . .compress images.</h1>
+<h1 class='page-title'>. . .record your screen on OS X.</h1>
 
 
     
@@ -54,9 +54,6 @@
     <ul class="os-list">
         
         <li><a href="../os/macosx/index.html"><i class="icon-macosx"></i>macosx</a></li>
-        ::
-        
-        <li><a href="../os/linux/index.html"><i class="icon-linux"></i>linux</a></li>
         
         
     </ul>
@@ -65,22 +62,10 @@
 
 
 
-
-    
-        <div class="pure-menu pure-menu-open pure-menu-horizontal tag-menu">
-    <span class="pure-menu-heading">Tags: </span>
-    <ul class="tag-list">
-        
-            <li><a href="../tag/imagemagick/index.html">imagemagick</a></li>
-            
-        
-    </ul>
-</div>
-    
 
 <br>
 
-Sometimes images are just too big!
+How to record your Mac&#39;s desktop with minimal additional software
 
 
 <hr>
@@ -98,7 +83,7 @@ Contributors:
 
 
 
-<span class='date date-updated'>Updated: 10/10/15</span>
+<span class='date date-updated'>Updated: 12/10/15</span>
 
 
 
@@ -108,29 +93,44 @@ Contributors:
 <hr>
 
 
-<p>Use <code>ImageMagick</code> to healthily compress JPEG images.</p>
-<h1>Compressing JPEG</h1>
-<ul>
-<li>quality in 85</li>
-<li>progressive (comprobed compression)</li>
-<li>a very tiny gausssian blur to optimize the size (0.05 or 0.5 of radius) depends on the quality and size of the picture, this notably optimizes the size of the jpeg.</li>
-<li>Strip any comment or exif tag</li>
-</ul>
-<div class="codehilite"><pre>convert -strip -interlace Plane -gaussian-blur 0.05 -quality 85% source.jpg result.jpg
-</pre></div>
-
-
-<h1>Reference</h1>
-<ul>
-<li><a href="http://stackoverflow.com/questions/7261855/recommendation-for-compressing-jpg-files-with-imagemagick">Stack Overflow post</a></li>
-</ul>
+<p>How to record your screen on OS X using QuickTime Player</p>
+<ol>
+<li>
+<p>Install <a href="https://code.google.com/p/soundflower/downloads/list">Soundflower</a> to enable system audio recording. Without <code>Soundflower</code>, you will only be able to record audio from your microphone.</p>
+</li>
+<li>
+<p>Open <code>Audio Midi Setup</code> and create a new multi-output device.
+Select Built-in Output, Built-in Line Output, and Soundflower (2ch)</p>
+</li>
+<li>
+<p>Then rename the device.</p>
+</li>
+</ol>
+<p>To record system audio, open System Preferences Sound then under Outputs, choose your multi-output device (adjust your sound before hand)</p>
+<ol>
+<li>
+<p>Open QuickTime Player and start a new screencapture. Choose the audio to go through Soundflower (2ch)</p>
+</li>
+<li>
+<p>Click on a screen to record there.</p>
+</li>
+</ol>
+<h2>Tips</h2>
+<ol>
+<li>
+<p>If you want to record on multiple monitors, then you have to duplicate QuickTime player in your Applications folder and start a new screencapture.</p>
+</li>
+<li>
+<p>To remove the darkened screen affect, Hide QuickTime Player.</p>
+</li>
+</ol>
 </article>
 
 <div id="likeBtn"></div>
 
 
 
-<p>Raw: <a href="https://raw.github.com/daschwa/killtheyak-pages/master/imagemagick-compression.md">imagemagick-compression.md</a></p>
+<p>Raw: <a href="https://raw.github.com/daschwa/killtheyak-pages/master/record-screen.md">record-screen.md</a></p>
 
 <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
 <a class="addthis_button_reddit"></a>
