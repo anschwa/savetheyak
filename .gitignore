@@ -12,3 +12,4 @@ _mailinglist
 node_modules
 
 build/
+.#*

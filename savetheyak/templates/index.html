@@ -2,16 +2,8 @@
 {% block content %}
 
 <div class="hero">
-{% if request.path == url_for('home') or home %}
     <h1 class="pure-u-1 brand">Save The Yak</h1>
     <h2 class="pure-u-3-4 l-centered subtitle">No-BS guides to get your project rolling</h2>
-</div><!-- end hero-->
-{% else %}
-<h1 class="pure-u-1 l-centered page-title">
-    {% if not os and not tag %}
-    All
-    {% endif %}
-    Guides {% if os %}for {{ os|capitalize }}{% elif tag %} tagged "{{ tag }}" {% endif %}
 </div><!-- end hero-->
 
 {% with oss=all_os  %}
@@ -22,10 +14,6 @@
     {% include "tags_menu.html" %}
 {% endwith %}
 
-{% endif %}
-
-
-
 <h2>All I want to do is. . .</h2>
 
 {% with pages=pages, os_icons=os_icons %}
@@ -33,8 +21,6 @@
 {% endwith %}
 
 {% if os or tag %}
-
-
 
 <h2>
     {% if os %}
@@ -48,7 +34,6 @@
 </a></span>
 
 </h2>
-
 
 {% endif %}
 {% endblock content %}

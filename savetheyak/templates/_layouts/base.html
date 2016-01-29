@@ -6,41 +6,45 @@
   <meta name="description" content="{% block meta_description %}No-BS guides to get your project going{% endblock %}">
   <link type="text/plain" rel="author" href="/static/humans.txt" />
   <link href="{{ url_for('recent_feed') }}"
-      rel="alternate"
-      title="Save The Yak: Recent Guides"
-      type="application/atom+xml">
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        rel="alternate"
+        title="Save The Yak: Recent Guides"
+        type="application/atom+xml">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 
   <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  {% block css %}{% endblock %}
 
+  {# Icons and fonts #}
+  <link rel="stylesheet" href="{{ url_for('static', filename='icons/css/killtheyak-icons.css') }}">
+  
+  {% block css %}{% endblock %}
+  
 </head>
 <body class="{% block body_class %}{% endblock %}">
-{% block body %}
+  {% block body %}
 
 
-<div id="layout" class="{% block content_class %}pure-g{% endblock content_class %}">
+  <div id="layout" class="{% block content_class %}pure-g{% endblock content_class %}">
 
-{% include "_layouts/nav.html" %}
+    {% include "_layouts/nav.html" %}
 
-  <div class="pure-u-1">
-    <div class="content">{% block content %}{% endblock %}</div>
-  </div>
+    <div class="pure-u-1">
+      <div class="content">{% block content %}{% endblock %}</div>
+    </div>
 
 
-</div><!-- end pure-g -->
+  </div><!-- end pure-g -->
 
-<div id="footer" class="pure-g">
-  <div class="pure-u-1">
-    <div class="footer-content">
-    {% block footer %}{% endblock footer %}
+  <div id="footer" class="pure-g">
+    <div class="pure-u-1">
+      <div class="footer-content">
+        {% block footer %}{% endblock footer %}
+      </div>
     </div>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}
 
 </body>
 </html>
