@@ -22,10 +22,10 @@ FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'footnotes']
 FLATPAGES_ROOT = os.path.join(PROJECT_ROOT, 'killtheyak-pages')
 FLATPAGES_EXTENSION = '.md'
 
-BASE_URL = 'http://daschwa.github.io/savetheyak'
-GITHUB_REPO = 'http://www.github.com/daschwa/savetheyak'
-PAGES_REPO = 'http://www.github.com/daschwa/savetheyak-pages'
-RAW_PAGES_PREFIX = "https://raw.github.com/daschwa/savetheyak-pages/master/"
+BASE_URL = 'http://anschwa.github.io/savetheyak'
+GITHUB_REPO = 'http://www.github.com/anschwa/savetheyak'
+PAGES_REPO = 'http://www.github.com/anschwa/savetheyak-pages'
+RAW_PAGES_PREFIX = "https://raw.github.com/anschwa/savetheyak-pages/master/"
 
 # View site locally
 FREEZER_RELATIVE_URLS = True

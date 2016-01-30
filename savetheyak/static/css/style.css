@@ -1,10 +1,207 @@
 /* Layout */
 * {margin:0; padding:0;}
 
+/* Links */
+
+a, a:visited {
+       color: #335c6e;
+       text-decoration: none;
+   }
+
+a:active {
+    color: #ce2323;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#sidebar nav a {
+    color: black;
+    text-decoration: underline;
+}
+
+#sidebar nav a:hover, footer a:hover {
+                          color: #ce2323 !important;
+                      }
+
+.tagline a {
+    text-decoration: none !important;
+}
+
+.contribute {
+    color: #005d04 !important;
+}
+
+/* Layout Styles */
+
 body {
+    min-width: 400px;
+    font-family: sans-serif;
     font-size: 100%;
 }
 
-.os-menu {
+#layout {
+    margin: 1em;
+}
 
+#sidebar {
+    width: 200px;
+    margin-right: 2em;
+    float: left;
+    line-height: 1.4em;
+}
+
+#main {
+    overflow: hidden;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h1{
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.hero h2 {
+    color: #777;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: normal;
+}
+
+#sidebar nav .brand {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.tagline {
+    font-size: 0.8em;
+}
+
+.tagline, .tagline a {
+    color: #777 !important;
+}
+
+#sidebar .os-menu, #sidebar .tag-menu {
+    margin: 1em 0;
+}
+
+.os-menu > ul, .os-menu li, .tag-menu > ul,
+.tag-menu li {
+    display: inline-block;
+}
+
+.pure-menu .pure-menu-heading {
+    color: #777;
+    text-transform: uppercase;
+}
+
+.pure-menu li, .pages-list li {
+    list-style: none;
+}
+
+footer {
+    padding: 1em 1.8em;
+    color: #777;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+/* Content Styles */
+
+.content h2, #main .content .pages-list,
+.content article > h1 {
+    line-height: 2em;
+}
+
+.content article > h1.muted {
+    color: #777;
+}
+
+.content article {
+    line-height: 1.5em;
+}
+
+.content hr {
+    margin: 0.5em 0;
+    color: #777;
+    border: 0;
+    height: 1px;
+    /* This is pretty cool, so we're keeping it. */
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+blockquote {
+    margin: 1em 4em;
+}
+
+textarea, code,
+pre  {
+    font-family: monospace!important;
+    overflow: auto;
+}
+
+.content pre {
+    font-size: 1.2em;
+    /* Should <pre> wrap or not? */
+    /* white-space: pre-wrap; */
+}
+
+.content p, .content pre {
+    margin: 1em 0;
+}
+
+.content .suggestions {
+    color: #777;
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+
+.muted, i.muted {
+    color: #999;
+}
+
+span.date-updated {
+    float: right;
+}
+
+.date {
+    font-style: italic;
+}
+
+/* Responsive / Mobile */
+
+@media only screen and (max-width:800px) {
+    #sidebar {
+        float: none;
+        width: auto;
+        margin-bottom: 2em;
+    }
+
+    #sidebar nav ul > li {
+        display: inline-block;
+        margin: 0 0.5em;
+    }
+
+    #sidebar nav ul {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+    }
+
+    .tagline {
+        position: absolute;
+        right: 1em;
+        top: 3em;
+    }
+
+    #sidebar .os-menu, #sidebar .tag-menu {
+        display: none;
+    }
 }

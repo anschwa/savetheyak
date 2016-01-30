@@ -1,13 +1,11 @@
 <div class="pure-u">
-<nav class="pure-menu pure-menu-open pure-menu-horizontal navtop">
-    <a href="{{ url_for('home') }}" class="pure-menu-heading brand">Save The Yak</a>
+  <nav class="pure-menu pure-menu-open pure-menu-horizontal navtop">
+    <h1 class="brand"><a href="{{ url_for('home') }}">Save The Yak</a></h1>
+    <span class='tagline'><a href="http://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html">Yak shaving</a> sucks. So let's save ourselves from the yak.</span>
     <ul>
-        <li><a href="{{ url_for('guides') }}">guides</a></li>
-        <li><a class='contribute' href="{{ url_for('contribute') }}">contribute</a></li>
-        <li><a href="http://www.github.com/daschwa/savetheyak">source</a></li>
-        <li><a href="{{ url_for('recent_feed') }}"><i class="icon-rss"></i></a></li>
+      <li><a class='contribute' href="{{ url_for('contribute') }}">contribute</a></li>
+      <li><a href="http://www.github.com/anschwa/savetheyak">source</a></li>
+      <li><a href="{{ url_for('recent_feed') }}"><i class="icon-rss"></i></a></li>
     </ul>
-        <span class='tagline'><a href="http://projects.csail.mit.edu/gsb/old-archive/gsb-archive/gsb2000-02-11.html">Yak shaving</a> sucks. So let's save ourselves from the yak.</span>
-
-</nav>
+  </nav>
 </div>

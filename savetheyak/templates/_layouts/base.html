@@ -9,7 +9,6 @@
         rel="alternate"
         title="Save The Yak: Recent Guides"
         type="application/atom+xml">
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
 
   <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
 
@@ -17,22 +16,32 @@
 
   {# Icons and fonts #}
   <link rel="stylesheet" href="{{ url_for('static', filename='icons/css/killtheyak-icons.css') }}">
-  
+
   {% block css %}{% endblock %}
-  
+
 </head>
 <body class="{% block body_class %}{% endblock %}">
   {% block body %}
 
-
   <div id="layout" class="{% block content_class %}pure-g{% endblock content_class %}">
 
-    {% include "_layouts/nav.html" %}
+    <div id="sidebar">
+      {% include "_layouts/nav.html" %}
 
-    <div class="pure-u-1">
-      <div class="content">{% block content %}{% endblock %}</div>
+      {% with oss=all_os  %}
+      {% include "os_menu.html" %}
+      {% endwith %}
+
+      {% with tags=all_tags  %}
+      {% include "tags_menu.html" %}
+      {% endwith %}
     </div>
 
+    <div id="main" class="pure-u-1">
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
 
   </div><!-- end pure-g -->
 

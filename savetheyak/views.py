@@ -61,11 +61,10 @@ def home():
     return render_template('index.html', pages=ALL_SORTED,
                            all_tags=SORTED_TAGS, all_os=ALL_OS, home=True)
 
-
-@app.route('/guides/')
-def guides():
-    return render_template('index.html', pages=ALL_SORTED,
-                            all_tags=SORTED_TAGS, all_os=ALL_OS)
+# @app.route('/guides/')
+# def guides():
+#     return render_template('index.html', pages=ALL_SORTED,
+#                             all_tags=SORTED_TAGS, all_os=ALL_OS)
 
 
 @app.route('/<path:path>/')
