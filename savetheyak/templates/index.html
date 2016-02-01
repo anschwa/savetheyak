@@ -2,15 +2,12 @@
 {% block content %}
 
 <div class="hero">
-  {% if request.path == url_for('home')  %}
+  {% if not os and not tag %}
   <h1 class="pure-u-1 brand">Save The Yak</h1>
   <h2 class="pure-u-3-4 l-centered subtitle">No-BS guides to get your project rolling</h2>
 </div><!-- end hero-->
 {% else %}
 <h1 class="pure-u-1 l-centered page-title">
-  {% if not os and not tag %}
-  All
-  {% endif %}
   Guides {% if os %}for {{ os|capitalize }}{% elif tag %} tagged "{{ tag }}" {% endif %}
 </div><!-- end hero-->
 
